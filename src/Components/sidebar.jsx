@@ -68,7 +68,7 @@ const Sidebar = memo(({ sidebarOpen, setSidebarOpen }) => {
       icon: ChartBarIcon,
       current: false,
     },
-    { name: "Change Password", href: "#", icon: ArrowPathIcon, current: false },
+    { name: "Change Password", href: "/change-password", icon: ArrowPathIcon, current: false },
   ];
 
 

@@ -9,6 +9,7 @@ import HeaderwiseReport from './headerwiseReport';
 import FileList from './fileList';
 import LocalBodyReport from './localBodyReport';
 import DistrictWiseReport from './districtwiseReport';
+import ChangePassword from './changePassword';
 
 const Layout = ({ sidebarOpen, setSidebarOpen }) => {
   const location = useLocation();
@@ -33,6 +34,7 @@ const Layout = ({ sidebarOpen, setSidebarOpen }) => {
           <Route path="/localbody-report" element={<LocalBodyReport/>} />
           <Route path="/headerwise-report" element={<HeaderwiseReport />} />
           <Route path="/districtwise-report" element={<DistrictWiseReport />} />
+          <Route path="/change-password" element={<ChangePasswords />} />
         </Routes>
       </div>
     </div>

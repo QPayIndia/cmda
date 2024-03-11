@@ -28,7 +28,7 @@ const UserAccessRights = () => {
 
     },
     {
-      name: "Gatewaywise Reports",
+      name: "Districtwise Reports",
 
     },
     { name: "Change Password"},

@@ -169,7 +169,17 @@ function  PaymentIntro() {
                 <tr>
                   <td className="px-2 py-4 text-sm text-gray-900">PayU</td>
                   <td className="px-2 py-4 text-sm text-gray-900   pl-4">
-                    <div className="radio ">
+                  <div className="radio p">
+                      <label>
+                        <input
+                          type="radio"
+                          name="optradio"
+                          className="form-radio"
+                        />
+                        <span className="ml-2">HDFC</span> 
+                      </label>
+                    </div>
+                    <div className="radio pt-2 ">
                       <label>
                         <input
                           type="radio"
