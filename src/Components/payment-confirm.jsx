@@ -44,7 +44,7 @@ const PaymentConfirm = () => {
                 Amount :
               </h4>
               <p className="block text-base font-normal text-gray-700 w-[50%]">
-                3724.00
+                3,724.00
               </p>
             </div>
 

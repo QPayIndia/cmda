@@ -110,42 +110,42 @@ function  PaymentIntro() {
                     <td className="px-2 py-4 text-sm text-gray-900">
                       Payable(INR)
                     </td>
-                    <td className="px-2 py-4 text-sm text-gray-900">3724.00</td>
-                    <td className="px-2 py-4 text-sm text-gray-900">0.00</td>
-                    <td className="px-2 py-4 text-sm text-gray-900">3724.00</td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">3,724.00</td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">0.00</td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">3,724.00</td>
                   </tr>
                   <tr>
                     <td className="px-2 py-4 text-sm text-gray-900">
                       Paid(INR)
                     </td>
-                    <td className="px-2 py-4 text-sm text-gray-900">0.00</td>
-                    <td className="px-2 py-4 text-sm text-gray-900">0.00</td>
-                    <td className="px-2 py-4 text-sm text-gray-900">0.00</td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">0.00</td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">0.00</td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">0.00</td>
                   </tr>
                   <tr>
                     <td className="px-2 py-4 text-sm text-gray-900">
                       Balance(INR)
                     </td>
-                    <td className="px-2 py-4 text-sm text-gray-900">
+                    <td className="px-2 py-4 text-sm text-gray-900 ">
                       <input
                         type="text"
-                        className="form-input w-full "
+                        className="form-input w-full text-right"
                         placeholder="Penalty"
                         defaultValue="0.00"
                       />
                     </td>
-                    <td className="px-2 py-4 text-sm text-gray-900">
+                    <td className="px-2 py-4 text-sm text-gray-900 ">
                       <input
                         type="text"
-                        className="form-input w-full "
+                        className="form-input w-full text-right "
                         placeholder="Penalty"
                         defaultValue="0.00"
                       />
                     </td>
-                    <td className="px-2 py-4 text-sm text-gray-900">
+                    <td className="px-2 py-4 text-sm text-gray-900 ">
                       <input
                         type="text"
-                        className="form-input w-full "
+                        className="form-input w-full text-right"
                         placeholder="Penalty"
                         defaultValue="0.00"
                       />

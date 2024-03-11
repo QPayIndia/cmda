@@ -13,7 +13,7 @@ function classNames(...classes) {
 export default function Header({sidebarOpen, setSidebarOpen}) {
      
   return (
-    <Disclosure as="nav" className="bg-[#0066ff] h-[64px] fixed w-full z-50">
+    <Disclosure as="nav" className="bg-[#0066ff] h-[64px] fixed w-full z-10">
       {({ open }) => (
         <>
           <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
