@@ -34,7 +34,7 @@ const Layout = ({ sidebarOpen, setSidebarOpen }) => {
           <Route path="/localbody-report" element={<LocalBodyReport/>} />
           <Route path="/headerwise-report" element={<HeaderwiseReport />} />
           <Route path="/districtwise-report" element={<DistrictWiseReport />} />
-          <Route path="/change-password" element={<ChangePasswords />} />
+          <Route path="/change-password" element={<ChangePassword />} />
         </Routes>
       </div>
     </div>
