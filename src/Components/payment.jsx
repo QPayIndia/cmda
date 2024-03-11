@@ -126,30 +126,9 @@ function  PaymentIntro() {
                     <td className="px-2 py-4 text-sm text-gray-900">
                       Balance(INR)
                     </td>
-                    <td className="px-2 py-4 text-sm text-gray-900 ">
-                      <input
-                        type="text"
-                        className="form-input w-full text-right"
-                        placeholder="Penalty"
-                        defaultValue="0.00"
-                      />
-                    </td>
-                    <td className="px-2 py-4 text-sm text-gray-900 ">
-                      <input
-                        type="text"
-                        className="form-input w-full text-right "
-                        placeholder="Penalty"
-                        defaultValue="0.00"
-                      />
-                    </td>
-                    <td className="px-2 py-4 text-sm text-gray-900 ">
-                      <input
-                        type="text"
-                        className="form-input w-full text-right"
-                        placeholder="Penalty"
-                        defaultValue="0.00"
-                      />
-                    </td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">3,724.00</td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">0.00</td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">3,724.00</td>
                   </tr>
                 </tbody>
               </table>
