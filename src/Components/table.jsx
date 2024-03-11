@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { ArrowDownTrayIcon, PrinterIcon } from "@heroicons/react/24/outline";
+import SingleReport from "./viewModal";
 
-const Table = ({ data, pagination=true }) => {
+const Table = ({ data, pagination = true , alignedRight }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [rowsPerPage] = useState(pagination ?5 : data.length );
- 
+  const [rowsPerPage] = useState(pagination ? 5 : data.length);
+  const[showModal, setShowModal]=useState(false)
+  const [singleData, setSingleData]=useState(null)
 
   // Calculate indexes for pagination
   const indexOfLastRow = currentPage * rowsPerPage;
@@ -24,14 +26,44 @@ const Table = ({ data, pagination=true }) => {
     }
   };
 
+  // Handle click on 'View'
+  const onViewClick = (fileDetails) => {
+setSingleData(fileDetails)
+setShowModal(true)
+  };
+
+
+  //Comma separation Amount Function
+
+function formatAmountWithCommas(amount) {
+    // Convert the number to a string and split it into parts
+    const parts = String(amount).split('.');
+    
+    // Add commas to the integer part
+    parts[0] = parts[0].replace(/\B(?=(\d{2})+(?!\d))/g, ',');
+
+    // If there's no decimal part, add .00
+    if (parts.length === 1) {
+        return parts[0] + '.00';
+    } else {
+        // If there's a decimal part, ensure it's formatted with two digits
+        parts[1] = parts[1].padEnd(2, '0').slice(0, 2);
+        return parts.join('.');
+    }
+}
+
+const isAmountOrBalanceKey = (key) => {
+  return /Amount|balance/i.test(key);
+};
+
   return (
     <div className="w-full flex flex-col gap-4 mt-4">
       <div className="ml-auto flex gap-4">
-        <button className="relative inline-flex gap-2 items-center rounded-md bg-white px-3 py-2 text-sm font-medium text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0">
+        <button className="relative inline-flex gap-2 items-center rounded-md bg-white px-3 py-2 text-xs font-medium text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0">
           <PrinterIcon className="w-4 h-4 " />
           Print
         </button>
-        <button className="relative inline-flex gap-2 items-center rounded-md bg-white px-3 py-2 text-sm font-medium text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0">
+        <button className="relative inline-flex gap-2 items-center rounded-md bg-white px-3 py-2 text-xs font-medium text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0">
           <ArrowDownTrayIcon className="w-4 h-4" />
           Export
         </button>
@@ -50,17 +82,21 @@ const Table = ({ data, pagination=true }) => {
               ))}
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className=" divide-y divide-gray-200">
             {currentRows.map((item, rowIndex) => (
               <tr key={rowIndex}>
                 {Object.entries(item).map(([key, value], cellIndex) => (
                   <td
                     key={cellIndex}
-                    className={`px-2 py-4 text-sm ${
+                    className={`px-2 py-4 text-xs ${
                       value === "View"
-                        ? "cursor-pointer text-blue-500"
+                        ? "text-blue-500 cursor-pointer "
                         : "text-gray-900 "
-                    }`}
+                    }${cellIndex > alignedRight ? "text-right" : "text-left"} ${isAmountOrBalanceKey(key) ? "text-right" : ""}`}
+        
+                    onClick={() => {
+                      if (value === "View") onViewClick(item);
+                    }}
                   >
                     {value}
                   </td>
@@ -77,7 +113,7 @@ const Table = ({ data, pagination=true }) => {
             aria-label="Pagination"
           >
             <div className="block">
-              <p className="text-left text-sm text-gray-700">
+              <p className="text-left text-xs text-gray-700">
                 Showing <span className="font-medium">{currentPage}</span> of{" "}
                 <span className="font-medium">
                   {Math.ceil(data.length / rowsPerPage)}
@@ -89,14 +125,14 @@ const Table = ({ data, pagination=true }) => {
               <button
                 onClick={prevPage}
                 disabled={currentPage === 1}
-                className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-medium text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
+                className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-xs font-medium text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
               >
                 Previous
               </button>
               <button
                 onClick={nextPage}
                 disabled={indexOfLastRow >= data.length}
-                className="relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-medium text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
+                className="relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-xs font-medium text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
               >
                 Next
               </button>
@@ -104,6 +140,9 @@ const Table = ({ data, pagination=true }) => {
           </nav>
         </div>
       )}
+
+
+      <SingleReport  open={showModal} setOpen={setShowModal} data={singleData}/>
     </div>
   );
 };

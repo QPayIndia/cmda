@@ -91,7 +91,7 @@ const Sidebar = memo(({ sidebarOpen, setSidebarOpen }) => {
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
             as="div"
-            className="relative z-50 lg:hidden"
+            className="relative z-10 lg:hidden"
             onClose={setSidebarOpen}
           >
             <Transition.Child
@@ -186,7 +186,7 @@ const Sidebar = memo(({ sidebarOpen, setSidebarOpen }) => {
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden mt-[64px] lg:fixed l lg:inset-y-0 lg:z-50 lg:flex lg:w-[260px] lg:flex-col border-r-2 ">
+        <div className="hidden mt-[64px] lg:fixed l lg:inset-y-0 lg:z-10 lg:flex lg:w-[260px] lg:flex-col border-r-2 ">
         {/* Sidebar component, swap this element with another sidebar if you like */}
         <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-[#F9FAFB]  py-4">
           <nav className="flex flex-1 flex-col">

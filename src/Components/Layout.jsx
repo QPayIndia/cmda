@@ -27,6 +27,7 @@ const Layout = ({ sidebarOpen, setSidebarOpen }) => {
       {!shouldHideSidebar() && <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />}
       <div className={` ${shouldHideSidebar() ? 'pt-[78px]' : 'w-full overflow-hidden lg:pl-[260px] pt-[78px] py-4 px-4'}`}>
         <Routes>
+        <Route path="/" element={<UserMaster />} />
           <Route path="/transaction-report" element={<TransactionReport />} />
           <Route path="/file-list" element={<FileList />} />
           <Route path="/file-details" element={<FileDetails />} />

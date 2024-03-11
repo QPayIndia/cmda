@@ -59,3 +59,11 @@ th {
 .styleScroll::-webkit-scrollbar-thumb:hover {
   background: gray; 
 }
+input[type='radio']:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+input[type='checkbox']:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

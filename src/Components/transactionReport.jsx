@@ -4,127 +4,128 @@ import Table from "./table";
 const TransactionReport = () => {
   const data = [
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "08-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0004/2024",
       "File No": "RE/GR-II/09/07/009",
       "Transaction id": "CMDA_16098",
-      "Amount (INR)": 3724.0,
+      "Amount (INR)": "3,724.00",
       "Payment Status": "Paid",
-      "Payment Mode": "Credit Card",
+      "Payment Mode": "Credit Card"
     },
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "08-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0007/2024",
       "File No": "RE/GR-II/09/07/019",
       "Transaction id": "CMDA_16099",
-      "Amount (INR)": 4500.0,
+      "Amount (INR)": "4,500.00",
       "Payment Status": "Paid",
-      "Payment Mode": "Debit Card",
+      "Payment Mode": "Debit Card"
     },
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "08-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0008/2024",
       "File No": "RE/GR-II/09/07/109",
       "Transaction id": "CMDA_16100",
-      "Amount (INR)": 2856.0,
+      "Amount (INR)": "2,856.00",
       "Payment Status": "Paid",
-      "Payment Mode": "Credit Card",
+      "Payment Mode": "Credit Card"
     },
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "08-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0009/2024",
       "File No": "RE/GR-II/09/07/213",
       "Transaction id": "CMDA_16101",
-      "Amount (INR)": 7800.0,
+      "Amount (INR)": "7,800.00",
       "Payment Status": "Failed",
-      "Payment Mode": "Net Banking",
+      "Payment Mode": "Net Banking"
     },
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "09-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0014/2024",
       "File No": "RE/GR-II/09/07/029",
       "Transaction id": "CMDA_16108",
-      "Amount (INR)": 4215.0,
+      "Amount (INR)": "4,215.00",
       "Payment Status": "Paid",
-      "Payment Mode": "Debit Card",
+      "Payment Mode": "Debit Card"
     },
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "09-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0008/2024",
       "File No": "RE/GR-II/09/07/109",
       "Transaction id": "CMDA_16100",
-      "Amount (INR)": 2856.0,
+      "Amount (INR)": "2,856.00",
       "Payment Status": "Paid",
-      "Payment Mode": "Credit Card",
+      "Payment Mode": "Credit Card"
     },
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "09-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0009/2024",
       "File No": "RE/GR-II/09/07/213",
       "Transaction id": "CMDA_16101",
-      "Amount (INR)": 7800.0,
+      "Amount (INR)": "7,800.00",
       "Payment Status": "Failed",
-      "Payment Mode": "Net Banking",
+      "Payment Mode": "Net Banking"
     },
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "09-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0014/2024",
       "File No": "RE/GR-II/09/07/029",
       "Transaction id": "CMDA_16108",
-      "Amount (INR)": 4215.0,
+      "Amount (INR)": "4,215.00",
       "Payment Status": "Paid",
-      "Payment Mode": "Debit Card",
+      "Payment Mode": "Debit Card"
     },
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "09-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0008/2024",
       "File No": "RE/GR-II/09/07/109",
       "Transaction id": "CMDA_16100",
-      "Amount (INR)": 2856.0,
+      "Amount (INR)": "2,856.00",
       "Payment Status": "Paid",
-      "Payment Mode": "Credit Card",
+      "Payment Mode": "Credit Card"
     },
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "09-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0009/2024",
       "File No": "RE/GR-II/09/07/213",
       "Transaction id": "CMDA_16101",
-      "Amount (INR)": 7800.0,
+      "Amount (INR)": "7,800.00",
       "Payment Status": "Failed",
-      "Payment Mode": "Net Banking",
+      "Payment Mode": "Net Banking"
     },
     {
-      Action: "View",
-      Date: "08-03-2024",
-      Gateway: "HDFC",
+      "Action": "View",
+      "Date": "09-03-2024",
+      "Gateway": "HDFC",
       "Challan No": "CMDA/0014/2024",
       "File No": "RE/GR-II/09/07/029",
       "Transaction id": "CMDA_16108",
-      "Amount (INR)": 4215.0,
+      "Amount (INR)": "4,215.00",
       "Payment Status": "Paid",
-      "Payment Mode": "Debit Card",
-    },
+      "Payment Mode": "Debit Card"
+    }
   ];
+  
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl font-medium ">Transaction Reports</h1>
@@ -187,10 +188,10 @@ const TransactionReport = () => {
         </div>
 
         <div className=" flex gap-4">
-          <button className="bg-[#0066FF]  text-white font-medium shadow-sm py-1.5 px-4 rounded">
+          <button className="bg-[#0066FF] text-sm text-white font-medium shadow-sm py-1.5 px-4 rounded">
             Submit
           </button>
-          <button className="bg-white border border-gray-300 shadow-sm  text-gray-900 hover:bg-gray-50 font-medium py-1.5 px-4 rounded">
+          <button className="bg-white border text-sm border-gray-300 shadow-sm  text-gray-900 hover:bg-gray-50 font-medium py-1.5 px-4 rounded">
             Clear
           </button>
         </div>

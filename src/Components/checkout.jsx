@@ -42,7 +42,7 @@ const Checkout = () => {
             <h4 className="block text-sm font-medium text-gray-700">
            Amount :
             </h4>
-            <p className="block text-base font-normal text-gray-700 w-[50%]">3724.00</p>
+            <p className="block text-base font-normal text-gray-700 w-[50%]">3,724.00</p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-2 justify-between  ">
