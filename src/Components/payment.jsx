@@ -88,7 +88,7 @@ function  PaymentIntro() {
             </div>
 
             <div className="mt-8 overflow-y-auto styleScroll pb-2">
-              <table className="divide-y divide-gray-200">
+              <table className="w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr className="bg-gray-200">
                     <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
