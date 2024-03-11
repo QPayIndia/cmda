@@ -167,7 +167,7 @@ function  PaymentIntro() {
             <table className="w-full  px-2 py-4 text-sm text-gray-900">
               <tbody className="bg-white divide-y divide-gray-200 ">
               <tr>
-                  <td className="px-2 py-4 text-sm text-gray-900">HDFC</td>
+                  <td className="px-2 py-4 text-sm text-gray-900">HDFC Gateway</td>
                   <td className="px-2 py-4 text-sm text-gray-900   pl-4">
                     <div className="radio ">
                       <label>
@@ -210,7 +210,6 @@ function  PaymentIntro() {
                         <input
                           type="radio"
                           name="optradio"
-                          defaultChecked
                           className="form-radio "
                         />
                          <span className="ml-2">Internet Banking</span>
