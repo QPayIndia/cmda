@@ -12,7 +12,7 @@ const TransactionReport = () => {
       "Transaction id": "CMDA_16098",
       "Amount (INR)": "3,724.00",
       "Payment Status": "Paid",
-      "Payment Mode": "Credit Card"
+      "Payment Mode": "e-Payment Request Slip"
     },
     {
       "Action": "View",

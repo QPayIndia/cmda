@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 
 function  PaymentIntro() {
   return (
-    <div className="flex flex-col w-full md:max-w-[800px] mx-auto py-4 px-4  ">
-      <div className="flex min-h-full flex-1 flex-col justify-center py-4 sm:px-6 lg:px-8">
-        <div className="sm:bg-white sm:px-6 sm:py-6 sm:shadow sm:rounded-lg  w-full ">
+    <div className="flex flex-col w-full md:max-w-[800px] sm:mx-auto py-4 px-4  ">
+      <div className="flex min-h-full  flex-col justify-center py-4 sm:px-6 lg:px-8">
+      <div className="bg-primary pb-6 text-gray-900   text-lg font-medium rounded-t-lg">
+      Payment Checkout
+          </div>
+        <div className="sm:bg-white sm:border border-gray-300 sm:px-6 sm:py-6  sm:rounded-lg  w-full ">
           <div className="bg-primary  text-lg font-medium pb-6 text-gray-900   rounded-t-lg">
             File Details
           </div>
@@ -137,8 +140,8 @@ function  PaymentIntro() {
         </div>
       </div>
 
-      <div className="flex   flex-col justify-center py-4 sm:px-6 lg:px-8">
-        <div className=" sm:bg-white sm:shadow sm:rounded-lg sm:px-6 sm:py-6 w-full">
+      <div className="flex   flex-col overflow-y-auto justify-center py-4 sm:px-6 lg:px-8">
+        <div className=" sm:bg-white sm:border border-gray-300  sm:rounded-lg sm:px-6 sm:py-6 w-full">
           <div className="bg-primary text-lg font-medium text-gray-900 pb-6 rounded-t-lg">
             Payment Option
           </div>
