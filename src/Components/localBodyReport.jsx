@@ -1,7 +1,7 @@
 import React from 'react'
 import Table from './table'
 
-const ZonewiseReport = () => {
+const LocalBodyReport = () => {
   const data = [
     {
       Action: "View",
@@ -172,4 +172,4 @@ const ZonewiseReport = () => {
   )
 }
 
-export default ZonewiseReport
+export default LocalBodyReport

@@ -63,8 +63,8 @@ const Sidebar = memo(({ sidebarOpen, setSidebarOpen }) => {
       current: false,
     },
     {
-      name: "Gatewaywise Reports",
-      href: "/gatewaywise-report",
+      name: "Districtwise Reports",
+      href: "/districtwise-report",
       icon: ChartBarIcon,
       current: false,
     },

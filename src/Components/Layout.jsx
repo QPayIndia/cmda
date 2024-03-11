@@ -2,16 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Sidebar from './sidebar';
 import FileDetails from './FileDetails';
-import Checkout from './checkout';
-import PaymentPage from './paymentPage';
-import PaymentConfirm from './payment-confirm';
 import TransactionReport from './transactionReport';
 import UserMaster from './userMaster';
 import UserAccessRights from './userAccessRights';
-import ZonewiseReport from './zonewiseReport';
 import HeaderwiseReport from './headerwiseReport';
-import GatewaywiseReport from './gatewaywiseReport';
 import FileList from './fileList';
+import LocalBodyReport from './localBodyReport';
+import DistrictWiseReport from './districtwiseReport';
 
 const Layout = ({ sidebarOpen, setSidebarOpen }) => {
   const location = useLocation();
@@ -33,9 +30,9 @@ const Layout = ({ sidebarOpen, setSidebarOpen }) => {
           <Route path="/file-details" element={<FileDetails />} />
           <Route path="/user-master" element={<UserMaster />} />
           <Route path="/user-access-rights" element={<UserAccessRights />} />
-          <Route path="/localbody-report" element={<ZonewiseReport />} />
+          <Route path="/localbody-report" element={<LocalBodyReport/>} />
           <Route path="/headerwise-report" element={<HeaderwiseReport />} />
-          <Route path="/gatewaywise-report" element={<GatewaywiseReport />} />
+          <Route path="/districtwise-report" element={<DistrictWiseReport />} />
         </Routes>
       </div>
     </div>

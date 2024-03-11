@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "./table";
 
-const GatewaywiseReport = () => {
+const DistrictWiseReport = () => {
   const data = [
     {
       "Action": "View",
@@ -181,4 +181,4 @@ const GatewaywiseReport = () => {
   );
 };
 
-export default GatewaywiseReport;
+export default DistrictWiseReport;
