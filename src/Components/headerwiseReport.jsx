@@ -160,10 +160,10 @@ const HeaderwiseReport = () => {
       </div>
 
       <div className=" flex gap-4">
-        <button className="bg-[#0066FF]  text-white font-medium shadow-sm py-1.5 px-4 rounded">
+        <button className="bg-[#0066FF] text-sm  text-white font-medium shadow-sm py-1.5 px-4 rounded">
           Submit
         </button>
-        <button className="bg-white shadow-sm border border-gray-300 text-gray-900 hover:bg-gray-50 font-medium py-1.5 px-4 rounded">
+        <button className="bg-white shadow-sm border text-sm border-gray-300 text-gray-900 hover:bg-gray-50 font-medium py-1.5 px-4 rounded">
           Clear
         </button>
       </div>

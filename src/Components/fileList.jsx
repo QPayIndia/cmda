@@ -86,7 +86,7 @@ const FileList = () => {
             </label>
             <div className="mt-1">
               <input
-                type="text"
+                type="date"
                 id="from-date"
                 name="from-date"
                 className="px-2 py-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm outline-none"
@@ -112,10 +112,10 @@ const FileList = () => {
         </div>
 
         <div className=" flex gap-4">
-          <button className="bg-[#0066FF]  text-white font-medium shadow-sm py-1.5 px-4 rounded">
+          <button className="bg-[#0066FF] text-sm text-white font-medium shadow-sm py-1.5 px-4 rounded">
             Submit
           </button>
-          <button className="bg-white border shadow-sm border-gray-300 text-gray-900 hover:bg-gray-50 font-medium py-1.5 px-4 rounded">
+          <button className="bg-white border text-sm shadow-sm border-gray-300 text-gray-900 hover:bg-gray-50 font-medium py-1.5 px-4 rounded">
             Clear
           </button>
         </div>

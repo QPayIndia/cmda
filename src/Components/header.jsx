@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import LogoImage from "./../assets/cmda.png"
 import { Link } from 'react-router-dom'
+import BankLogo from "./../assets/bank.png"
 
 
 
@@ -19,7 +20,7 @@ export default function Header({sidebarOpen, setSidebarOpen}) {
           <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
 
-              <div className="flex flex-1 items-center gap-4 justify-start">
+              <div className="flex  items-center gap-4 justify-start">
                 <Bars3Icon onClick={()=>setSidebarOpen(!sidebarOpen)} className='lg:hidden w-6 h-6 text-white'  />
                 <div className="flex flex-shrink-0 items-center">
                   <img
@@ -29,7 +30,17 @@ export default function Header({sidebarOpen, setSidebarOpen}) {
                   />
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+              <div className="flex  flex-col  items-center">
+                  <img
+                    className="h-5 w-auto"
+                    src={BankLogo}
+                    alt="HDFC"
+                  />
+                  <p className='hidden sm:block text-white text-sm font-normal'>Transaction Dashboard</p>
+                </div>
+
+              <div className="flex items-center pr-2 static inset-auto sm:ml-6 sm:pr-0">
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
