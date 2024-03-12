@@ -1,8 +1,8 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import LogoImage from "./../assets/cmda.png"
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import BankLogo from "./../assets/bank.png"
 
 
@@ -12,6 +12,20 @@ function classNames(...classes) {
 }
 
 export default function Header({sidebarOpen, setSidebarOpen}) {
+
+  const location = useLocation();
+  const hideLogoRoutes = ['/payment', '/checkout', '/payment-page', '/payment-confirm'];
+  const [hideLogo, setHideLogo] = useState(false);
+
+  // Function to check if the current location matches any of the routes that should hide the sidebar
+  const shouldHideLogo = () => {
+    return hideLogoRoutes.includes(location.pathname);
+  };
+
+  useEffect(() => {
+    // Update hideLogo state based on the current location
+    setHideLogo(shouldHideLogo());
+  }, [location]);
      
   return (
     <Disclosure as="nav" className="bg-[#0066ff] h-[64px] fixed w-full z-10">
@@ -31,14 +45,14 @@ export default function Header({sidebarOpen, setSidebarOpen}) {
                 </div>
               </div>
 
-              <div className="flex  flex-col  items-center">
+             {!hideLogo &&  <div className="flex  flex-col  items-center">
                   <img
                     className="h-5 w-auto"
                     src={BankLogo}
                     alt="HDFC"
                   />
                   <p className='hidden sm:block text-white text-sm font-normal'>Transaction Dashboard</p>
-                </div>
+                </div> }
 
               <div className="flex items-center pr-2 static inset-auto sm:ml-6 sm:pr-0">
 

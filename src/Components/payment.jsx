@@ -78,7 +78,7 @@ function  PaymentIntro() {
                   Owner name :
                 </h4>
                 <p className="block text-base font-normal text-gray-700">
-                  Khushboo{" "}
+                  Vigneshwaran
                 </p>
               </div>
             </div>
