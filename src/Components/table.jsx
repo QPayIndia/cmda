@@ -34,23 +34,29 @@ setShowModal(true)
 
 
   //Comma separation Amount Function
+  function formatAmountWithCommas(amount) {
+    // Convert the number to a floating-point number
+    const number = parseFloat(amount);
 
-function formatAmountWithCommas(amount) {
-    // Convert the number to a string and split it into parts
-    const parts = String(amount).split('.');
-    
-    // Add commas to the integer part
-    parts[0] = parts[0].replace(/\B(?=(\d{2})+(?!\d))/g, ',');
-
-    // If there's no decimal part, add .00
-    if (parts.length === 1) {
-        return parts[0] + '.00';
-    } else {
-        // If there's a decimal part, ensure it's formatted with two digits
-        parts[1] = parts[1].padEnd(2, '0').slice(0, 2);
-        return parts.join('.');
+    // If the number is not a valid number, return it as is
+    if (isNaN(number)) {
+        return amount;
     }
+
+    // Format the number with thousand separators
+    const formattedNumber = number.toLocaleString("en-IN", {
+        maximumFractionDigits: 2,
+        minimumFractionDigits: 2
+    });
+
+    // If the original number has no decimal part, append .00
+    if (formattedNumber.indexOf('.') === -1) {
+        return formattedNumber + '.00';
+    }
+
+    return formattedNumber;
 }
+
 
 const isAmountOrBalanceKey = (key) => {
   return /Amount|balance/i.test(key);
@@ -98,7 +104,7 @@ const isAmountOrBalanceKey = (key) => {
                       if (value === "View") onViewClick(item);
                     }}
                   >
-                    {value}
+                    {isAmountOrBalanceKey(key) ? formatAmountWithCommas(value) : value}
                   </td>
                 ))}
               </tr>

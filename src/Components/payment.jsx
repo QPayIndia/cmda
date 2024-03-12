@@ -184,41 +184,7 @@ function  PaymentIntro() {
                     </div>
                   </td>
                 </tr>
-                <tr>
-                  <td className="px-2 py-4 text-sm text-gray-900">PayU</td>
-                  <td className="px-2 py-4 text-sm text-gray-900   pl-4">
-                    <div className="radio ">
-                      <label>
-                        <input
-                          type="radio"
-                          name="optradio"
-                          className="form-radio "
-                        />
-                         <span className="ml-2">Internet Banking</span>
-                      </label>
-                    </div>
-                    <div className="radio pt-2">
-                      <label>
-                        <input
-                          type="radio"
-                          name="optradio"
-                          className="form-radio"
-                        />
-                        <span className="ml-2">Credit Card</span> 
-                      </label>
-                    </div>
-                    <div className="radio pt-2">
-                      <label>
-                        <input
-                          type="radio"
-                          name="optradio"
-                          className="form-radio"
-                        />
-                        <span className="ml-2">Debit Card</span> 
-                      </label>
-                    </div>
-                  </td>
-                </tr>
+          
                 <tr>
                   <td className="px-2 py-4 text-sm text-gray-900 whitespace-normal">
                     eCollect Slip for NEFT / RTGS
