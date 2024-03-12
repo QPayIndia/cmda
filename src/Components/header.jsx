@@ -35,7 +35,7 @@ export default function Header({sidebarOpen, setSidebarOpen}) {
             <div className="relative flex h-16 items-center justify-between">
 
               <div className="flex  items-center gap-4 justify-start">
-                <Bars3Icon onClick={()=>setSidebarOpen(!sidebarOpen)} className='lg:hidden w-6 h-6 text-white'  />
+             { !hideLogo && <Bars3Icon onClick={()=>setSidebarOpen(!sidebarOpen)} className='lg:hidden w-6 h-6 text-white'  />}
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
