@@ -237,7 +237,7 @@ const Sidebar = memo(({ sidebarOpen, setSidebarOpen }) => {
         {/* Static sidebar for desktop */}
         <div className="hidden mt-[64px] lg:fixed l lg:inset-y-0 lg:z-10 lg:flex lg:w-[260px] lg:flex-col border-r-2 ">
         {/* Sidebar component, swap this element with another sidebar if you like */}
-        <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-[#F9FAFB] pt-4 pb-4">
+        <div className="flex grow flex-col gap-y-5 overflow-y-auto element bg-[#F9FAFB] pt-4 pb-4">
                     <nav className="flex flex-1 flex-col">
             <ul role="list" className="flex flex-1 flex-col gap-y-7">
               <li>

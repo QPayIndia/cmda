@@ -63,27 +63,10 @@ th {
 }
 
 
-.sideScroll::-webkit-scrollbar-track {
- 
-  box-shadow: inset 0 0 2px grey; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-.sideScroll::-webkit-scrollbar-thumb {
-  background: rgb(185, 185, 185); 
-  border-radius: 10px;
+.element::-webkit-scrollbar {
+  display: none;
 }
 
-.sideScroll::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
- 
-}
-/* Handle on hover */
-.sideScroll::-webkit-scrollbar-thumb:hover {
-  background: rgb(185, 185, 185); 
-}
 input[type='radio']:focus {
   outline: none !important;
   box-shadow: none !important;
