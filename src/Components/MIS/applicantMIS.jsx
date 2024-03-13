@@ -52,7 +52,7 @@ const MISApplicant = () => {
       0.0,
       0.0,
       0.0,
-      "#REF!",
+      1026000,
     ],
     [
       "View",
@@ -103,7 +103,7 @@ const MISApplicant = () => {
       3000.0,
       0.0,
       3000.0,
-      "#REF!",
+      1347500,
     ],
     [
       "View",
@@ -155,7 +155,7 @@ const MISApplicant = () => {
       3000.0,
       0.0,
       3000.0,
-      "#REF!",
+      580000,
     ],
     [
       "View",
@@ -206,7 +206,7 @@ const MISApplicant = () => {
       3000.0,
       0.0,
       3000.0,
-      "#REF!",
+      923000,
     ],
   ];
 
@@ -251,7 +251,7 @@ const MISApplicant = () => {
     9000.0,
     0.0,
     9000.0,
-    "#REF!",
+    3876500,
   ];
 
   function formatAmountWithCommas(amount) {
