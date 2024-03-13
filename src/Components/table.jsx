@@ -98,13 +98,13 @@ const isAmountOrBalanceKey = (key) => {
                       value === "View"
                         ? "text-blue-500 cursor-pointer "
                         : "text-gray-900 "
-                    }${cellIndex > alignedRight ? "text-right" : "text-left"} ${isAmountOrBalanceKey(key) ? "text-right" : ""}`}
+                    } ${!isNaN(value) ? "text-right" : ""}`}
         
                     onClick={() => {
                       if (value === "View") onViewClick(item);
                     }}
                   >
-                    {isAmountOrBalanceKey(key) ? formatAmountWithCommas(value) : value}
+                    {!isNaN(value) ? formatAmountWithCommas(value) : value}
                   </td>
                 ))}
               </tr>
