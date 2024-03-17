@@ -9,30 +9,51 @@ const UserAccessRights = () => {
       name: "User Access Rights",
  
     },
+  
+    { name: "Change Password"},
+  ];
+
+  const Gateway = [
+    { name: "Transaction" },
+    {
+      name: "Header",
+ 
+    },
+    {
+      name: "Local Body",
+
+    },
+    {
+      name: "District",
+    },
+    {
+      name: "Applicant",
+    },
+  ]
+
+  const MIS = [
+    { name: "Transaction" },
+    {
+      name: "Header",
+ 
+    },
+    {
+      name: "Local Body",
+
+    },
+    {
+      name: "District",
+    },
+    {
+      name: "Applicant",
+    },
     {
       name: "File List",
-
     },
     {
       name: "File Details",
     },
-    {
-      name: "Transaction Reports",
-    },
-    {
-      name: "Local Body Reports",
-  
-    },
-    {
-      name: "Headerwise Reports",
-
-    },
-    {
-      name: "Gatewaywise Reports",
-
-    },
-    { name: "Change Password"},
-  ];
+  ]
 
   const handleCheckboxChange = (event) => {
     setCheckedItems({
@@ -43,7 +64,7 @@ const UserAccessRights = () => {
   return (
     <>
     <h1 className="text-xl font-medium  pb-4">User Access Rights</h1>
-    <div className="w-full md:w-[500px] sm:mx-auto text-left  border border-gray-300 px-6 py-6 rounded-md mt-4 flex flex-col gap-4 self-baseline">
+    <div className="w-full md:w-[500px] sm:mx-auto text-left mb-4 border border-gray-300 px-6 py-6 rounded-md mt-4 flex flex-col gap-4 self-baseline">
 
         <div>
           <label
@@ -68,7 +89,43 @@ const UserAccessRights = () => {
         </div>
         <div className='flex flex-col gap-2'>
           <p className='block text-sm font-medium text-gray-700'>Select menu</p>
-      {navigationLinks.map((link, index) => (
+      {navigationLinks?.map((link, index) => (
+        <div key={index} className="flex items-center">
+          <input
+            type="checkbox"
+            id={`checkbox-${index}`}
+            name={link.name}
+            checked={checkedItems[link.name] || false}
+            onChange={handleCheckboxChange}
+            className="mr-2 outline-none ring-none shadow-none"
+          />
+          <label htmlFor={`checkbox-${index}`} className="cursor-pointer text-sm pl-2">
+            {link.name}
+          </label>
+        </div>
+      ))}
+    </div>
+    <div className='flex flex-col gap-2'>
+          <p className='block text-sm font-medium text-gray-700'>Gatewaywise reports</p>
+      {Gateway.map((link, index) => (
+        <div key={index} className="flex items-center">
+          <input
+            type="checkbox"
+            id={`checkbox-${index}`}
+            name={link.name}
+            checked={checkedItems[link.name] || false}
+            onChange={handleCheckboxChange}
+            className="mr-2 outline-none ring-none shadow-none"
+          />
+          <label htmlFor={`checkbox-${index}`} className="cursor-pointer text-sm pl-2">
+            {link.name}
+          </label>
+        </div>
+      ))}
+    </div>
+    <div className='flex flex-col gap-2'>
+          <p className='block text-sm font-medium text-gray-700'>MIS reports</p>
+      {MIS?.map((link, index) => (
         <div key={index} className="flex items-center">
           <input
             type="checkbox"

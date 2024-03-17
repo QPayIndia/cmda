@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 
 function  PaymentIntro() {
   return (
-    <div className="flex flex-col w-full md:max-w-[800px] mx-auto py-4 px-4  ">
-      <div className="flex min-h-full flex-1 flex-col justify-center py-4 sm:px-6 lg:px-8">
-        <div className="sm:bg-white sm:px-6 sm:py-6 sm:shadow sm:rounded-lg  w-full ">
+    <div className="flex flex-col w-full md:max-w-[800px] sm:mx-auto py-4 px-4  ">
+      <div className="flex min-h-full  flex-col justify-center py-4 sm:px-6 lg:px-8">
+      <div className="bg-primary pb-6 text-gray-900   text-lg font-medium rounded-t-lg">
+      Payment Checkout
+          </div>
+        <div className="sm:bg-white sm:border border-gray-300 sm:px-6 sm:py-6  sm:rounded-lg  w-full ">
           <div className="bg-primary  text-lg font-medium pb-6 text-gray-900   rounded-t-lg">
             File Details
           </div>
@@ -75,7 +78,7 @@ function  PaymentIntro() {
                   Owner name :
                 </h4>
                 <p className="block text-base font-normal text-gray-700">
-                  Khushboo{" "}
+                  Vigneshwaran
                 </p>
               </div>
             </div>
@@ -88,7 +91,7 @@ function  PaymentIntro() {
             </div>
 
             <div className="mt-8 overflow-y-auto styleScroll pb-2">
-              <table className="divide-y divide-gray-200">
+              <table className="w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr className="bg-gray-200">
                     <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -126,30 +129,9 @@ function  PaymentIntro() {
                     <td className="px-2 py-4 text-sm text-gray-900">
                       Balance(INR)
                     </td>
-                    <td className="px-2 py-4 text-sm text-gray-900 ">
-                      <input
-                        type="text"
-                        className="form-input w-full text-right"
-                        placeholder="Penalty"
-                        defaultValue="0.00"
-                      />
-                    </td>
-                    <td className="px-2 py-4 text-sm text-gray-900 ">
-                      <input
-                        type="text"
-                        className="form-input w-full text-right "
-                        placeholder="Penalty"
-                        defaultValue="0.00"
-                      />
-                    </td>
-                    <td className="px-2 py-4 text-sm text-gray-900 ">
-                      <input
-                        type="text"
-                        className="form-input w-full text-right"
-                        placeholder="Penalty"
-                        defaultValue="0.00"
-                      />
-                    </td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">3,724.00</td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">0.00</td>
+                    <td className="px-2 py-4 text-sm text-gray-900 text-right">3,724.00</td>
                   </tr>
                 </tbody>
               </table>
@@ -158,16 +140,16 @@ function  PaymentIntro() {
         </div>
       </div>
 
-      <div className="flex   flex-col justify-center py-4 sm:px-6 lg:px-8">
-        <div className=" sm:bg-white sm:shadow sm:rounded-lg sm:px-6 sm:py-6 w-full">
+      <div className="flex   flex-col overflow-y-auto justify-center py-4 sm:px-6 lg:px-8">
+        <div className=" sm:bg-white sm:border border-gray-300  sm:rounded-lg sm:px-6 sm:py-6 w-full">
           <div className="bg-primary text-lg font-medium text-gray-900 pb-6 rounded-t-lg">
             Payment Option
           </div>
           <div className="">
             <table className="w-full  px-2 py-4 text-sm text-gray-900">
               <tbody className="bg-white divide-y divide-gray-200 ">
-                <tr>
-                  <td className="px-2 py-4 text-sm text-gray-900">PayU</td>
+              <tr>
+                  <td className="px-2 py-4 text-sm text-gray-900">HDFC Gateway</td>
                   <td className="px-2 py-4 text-sm text-gray-900   pl-4">
                     <div className="radio ">
                       <label>
@@ -202,6 +184,7 @@ function  PaymentIntro() {
                     </div>
                   </td>
                 </tr>
+          
                 <tr>
                   <td className="px-2 py-4 text-sm text-gray-900 whitespace-normal">
                     eCollect Slip for NEFT / RTGS
