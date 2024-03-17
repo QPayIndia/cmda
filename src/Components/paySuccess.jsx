@@ -1,14 +1,20 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/24/outline'
-import { Link } from 'react-router-dom'
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { CheckIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link, useNavigate} from "react-router-dom";
 
-export default function PaySuccess({open, setOpen}) {
-
-
+export default function PaySuccess({ open, setOpen, message, description }) {
+  const navigate = useNavigate();
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={()=>setOpen(false)}>
+      <Dialog
+        as="div"
+        className="relative z-100"
+        onClose={() => {
+          setOpen(false);
+          navigate('/payment');
+        }}
+      >
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -35,33 +41,64 @@ export default function PaySuccess({open, setOpen}) {
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
                 <div>
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
-                    <CheckIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
+                    {message !== "success" ? (
+                      <XMarkIcon
+                        className="h-6 w-6 text-red-600"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <CheckIcon
+                        className="h-6 w-6 text-green-600"
+                        aria-hidden="true"
+                      />
+                    )}
                   </div>
                   <div className="mt-3 text-center sm:mt-5">
-                    <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
-                      Payment successful
+                    <Dialog.Title
+                      as="h3"
+                      className="text-base font-semibold leading-6 text-gray-900"
+                    >
+                      {message !== "success"
+                        ? "Payment failed"
+                        : "Payment successful"}
                     </Dialog.Title>
                     <div className="mt-2">
-                      {/* <p className="text-sm text-gray-500">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet labore.
-                      </p> */}
+                      {message !== "success" && (
+                        <p className="text-sm text-gray-500">{description}</p>
+                      )}
                     </div>
                   </div>
                 </div>
-                <div className="mt-5 sm:mt-6">
-                  <Link
-                  to={"/payment-confirm"}
-                
-                    className=" inline-flex mx-auto w-[100%] justify-center rounded-md bg-[#0066ff] px-3 py-2 text-sm font-medium text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                  >
-                   Check receipt
-                  </Link>
-                </div>
+                {message == "success" ? (
+                  <div className="mt-5 sm:mt-6">
+                    <Link
+                      to={"/payment-confirm"}
+                      className=" inline-flex mx-auto w-[100%] justify-center rounded-md bg-[#0066ff] px-3 py-2 text-sm font-medium text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    >
+                      Check receipt
+                    </Link>{" "}
+                  </div>
+                ) : (
+                  <div className="flex gap-4">
+                    <Link
+                      to={"/payment-confirm"}
+                      className=" inline-flex mx-auto w-[100%] bg-white border shadow-sm border-gray-300 text-gray-900 hover:bg-gray-50 font-medium py-1.5 px-4 rounded"
+                    >
+                      cancel
+                    </Link>
+                    <Link
+                      to={"/payment-confirm"}
+                      className=" inline-flex mx-auto w-[100%] justify-center rounded-md bg-[#0066ff] px-3 py-2 text-sm font-medium text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    >
+                      Check receipt
+                    </Link>
+                  </div>
+                )}
               </Dialog.Panel>
             </Transition.Child>
           </div>
         </div>
       </Dialog>
     </Transition.Root>
-  )
+  );
 }
