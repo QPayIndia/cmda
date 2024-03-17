@@ -156,14 +156,7 @@ const Checkout = () => {
             <p className="block text-base font-normal text-gray-700 w-[50%]">HDFC</p>
           </div>
 
-          <div className="flex flex-col sm:flex-row  gap-2 justify-between  ">
-              <h4 className="block text-sm font-medium text-gray-700">
-                Status :
-              </h4>
-              <p className="block text-base font-normal text-gray-700 w-[50%]">
-                Received from HDFC
-              </p>
-            </div>
+   
 
           </div>
       
