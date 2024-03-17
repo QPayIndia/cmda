@@ -72,7 +72,7 @@ const PaymentConfirm = () => {
                 Status :
               </h4>
               <p className="block text-base font-normal text-gray-700 w-[50%]">
-                Reveived from HDFC
+                Paid
               </p>
             </div>
           </div>
