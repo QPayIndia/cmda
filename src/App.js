@@ -15,6 +15,7 @@ import PaymentPage from "./Components/paymentPage";
 import PaymentConfirm from "./Components/payment-confirm";
 import Layout from "./Components/Layout";
 import PaymentIntro from "./Components/payment";
+import ESlip from "./Components/eSlip";
 
 function App() {
  
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/payment-page" element={<PaymentPage />} />
                 <Route path="/payment-confirm" element={<PaymentConfirm />} />
+                <Route path="/e-pay" element={<ESlip/>} />
        </Routes>
       </div>
     </Router>

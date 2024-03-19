@@ -16,10 +16,11 @@ import MISLocalBody from './MIS/localBody';
 import MISHeader from './MIS/headerwise';
 import MISDistrict from './MIS/districtwiseMIS';
 import MISApplicant from './MIS/applicantMIS';
+import ESlip from './eSlip';
 
 const Layout = ({ sidebarOpen, setSidebarOpen }) => {
   const location = useLocation();
-  const hideSidebarRoutes = ['/payment', '/checkout', '/payment-page', '/payment-confirm'];
+  const hideSidebarRoutes = ['/payment', '/checkout', '/payment-page', '/payment-confirm','/e-pay'];
 
   // Function to check if the current location matches any of the routes that should hide the sidebar
   const shouldHideSidebar = () => {
@@ -46,6 +47,7 @@ const Layout = ({ sidebarOpen, setSidebarOpen }) => {
           <Route path="/mis-reports/headerwise" element={<MISHeader />} />
           <Route path="/mis-reports/districtwise" element={<MISDistrict />} />
           <Route path="/mis-reports/applicant" element={<MISApplicant />} />
+      
         </Routes>
       </div>
     </div>
