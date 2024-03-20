@@ -27,12 +27,12 @@ const ESlip = () => {
 
   const main = [
     {
-      "Beneficiary Name": "Institute’s Name",
+      "Beneficiary Name": "CMDA",
       "Account No.": "XXXMI1XAVE63N9RX",
       "IFSC Code": "HDFC0000113",
       Bank: "HDFC Bank",
       Amount: "₹ 3,724.00",
-      "Customer Email ID": "test@gmail.com",
+      "Customer Email ID": "doshibuilders@gmail.com",
       "Customer Mobile No": "4894533784",
       "Merchant Order Id": "order_NV5kb8r7PTTqpD",
     },
