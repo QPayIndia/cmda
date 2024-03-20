@@ -1,3 +1,4 @@
+import { PrinterIcon } from "@heroicons/react/24/outline";
 import React from "react";
 
 const ESlip = () => {
@@ -30,7 +31,7 @@ const ESlip = () => {
       "Account No.": "XXXMI1XAVE63N9RX",
       "IFSC Code": "HDFC0000113",
       Bank: "HDFC Bank",
-      Amount: "₹ 3,724.00" ,
+      Amount: "₹ 3,724.00",
       "Customer Email ID": "test@gmail.com",
       "Customer Mobile No": "4894533784",
       "Merchant Order Id": "order_NV5kb8r7PTTqpD",
@@ -47,9 +48,9 @@ const ESlip = () => {
 
   return (
     <div className=" overflow-y-auto styleScroll pb-12 pt-4 w-full md:max-w-[800px] flex flex-col mx-auto px-4 sm:px-0 ">
-          <div className="bg-primary pb-6  text-lg font-medium text-gray-900   rounded-t-lg">
-          e-Payment Request Slip
-        </div>
+      <div className="bg-primary pb-6  text-lg font-medium text-gray-900   rounded-t-lg">
+        e-Payment Request Slip
+      </div>
       <table className="w-full divide-y divide-gray-200">
         <tbody className="divide-y divide-gray-200">
           <tr>
@@ -59,7 +60,7 @@ const ESlip = () => {
             >
               <div className="flex flex-col gap-4 sm:flex-row justify-between">
                 <p> For RTGS/NEFT/IMPS/Funds Transfer</p>
-                <p >Date: {getCurrentDateTime()}</p>
+                <p>Date: {getCurrentDateTime()}</p>
               </div>
             </td>
           </tr>
@@ -124,13 +125,13 @@ const ESlip = () => {
               </td>
             </tr>
           ))}
-           <tr>
+          <tr>
             <td
               colSpan="2"
               className="relative px-2 py-4 text-xs font-semibold h-[100px] text-gray-900 cursor-pointer "
             >
               <div className="absolute bottom-4 right-4">
-              Authorised Signatory
+                Authorised Signatory
               </div>
             </td>
           </tr>
@@ -139,13 +140,25 @@ const ESlip = () => {
               colSpan="2"
               className="relative px-2 py-4 text-xs font-semibold h-[100px] text-gray-900 cursor-pointer "
             >
-              <div className="absolute bottom-4 right-4">
-              Branch Stamp
-              </div>
+              <div className="absolute bottom-4 right-4">Branch Stamp</div>
             </td>
           </tr>
         </tbody>
       </table>
+      <div className="w-full flex flex-col gap-4 mt-8">
+        <div className=" mx-auto flex gap-4">
+          <button className="relative inline-flex gap-2 items-center rounded-md bg-white px-3 py-2 text-sm font-medium text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0">
+            <PrinterIcon className="w-4 h-4 " />
+            Print
+          </button>
+          <button
+            className="relative inline-flex gap-2 items-center rounded-md bg-white px-3 py-2 text-sm font-medium text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
+            onClick={() => window.history.back()}
+          >
+            Go back
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
