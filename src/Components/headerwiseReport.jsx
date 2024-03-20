@@ -120,7 +120,8 @@ const dropDown = [
   { name: 'Caution Deposit', value: 'caution_deposit' },
   { name: 'Balance Scrutiny Fees', value: 'balance_scrutiny_fees' },
   { name: 'SD - STP', value: 'sd_stp' },
-  { name: 'Advertisement Charges', value: 'advertisement_charges' }
+  { name: 'Advertisement Charges', value: 'advertisement_charges' },
+  { name: 'Shelter fee', value: 'shelter_fee' }
 ];
 
   
