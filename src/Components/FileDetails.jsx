@@ -135,6 +135,16 @@ const FileDetails = () => {
       "Total Balance (INR)": 0.00
     },
     {
+      "Budget Header": "Shelter fee",
+      "Total Fees (INR)": 0.00,
+      "Total Penalty (INR)": 0.00,
+      "Total Fees Paid (INR)": 0.00,
+      "Total Penalty Paid (INR)": 0.00,
+      "Balance Fees (INR)": 0.00,
+      "Balance Penalty (INR)": 0.00,
+      "Total Balance (INR)": 0.00
+    },
+    {
       "Budget Header": "Total",
       "Total Fees (INR)": 1025500.00,
       "Total Penalty (INR)": 11000.00,

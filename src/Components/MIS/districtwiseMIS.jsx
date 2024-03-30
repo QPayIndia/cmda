@@ -52,7 +52,8 @@ const MISDistrict = () => {
       0.0,
       0.0,
       0.0,
-      1026000,
+      1000.0,  0.0,  1000.0,
+      1027000,
     ],
     [
       "View",
@@ -103,7 +104,8 @@ const MISDistrict = () => {
       3000.0,
       0.0,
       3000.0,
-      1347500,
+      2000.0,  0.0,  2000.0,
+      1349500,
     ],
     [
       "View",
@@ -154,7 +156,10 @@ const MISDistrict = () => {
       3000.0,
       0.0,
       3000.0,
-      580000,
+      1000.0,
+      0.0,
+      1000.0,
+      581000,
     ],
     [
       "View",
@@ -204,7 +209,10 @@ const MISDistrict = () => {
       3000.0,
       0.0,
       3000.0,
-      923000,
+      3000.0,
+      0.0,
+      3000.0,
+      926000,
     ],
   ];
 
@@ -249,8 +257,8 @@ const MISDistrict = () => {
     9000.0,
     0.0,
     9000.0,
-
-    3876500
+    7000.0,  0.0,  7000.0,
+    3883500
   ];
 
   function formatAmountWithCommas(amount) {
@@ -506,13 +514,19 @@ const MISDistrict = () => {
                 </th>
                 <th
                   className="px-2 py-3 text-center text-xs font-medium text-gray-500 "
+                  colSpan="3"
+                >
+                  Shelter fee
+                </th>
+                <th
+                  className="px-2 py-3 text-center text-xs font-medium text-gray-500 "
                   rowSpan="2"
                 >
                   Total Balance (INR)
                 </th>
               </tr>
               <tr>
-                {[...Array(13)].map((_, index) => (
+                {[...Array(14)].map((_, index) => (
                   <React.Fragment key={index}>
                     <th className="px-2 py-3 text-center text-xs font-medium text-gray-500 ">
                       Total fees (INR)

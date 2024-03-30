@@ -14,7 +14,7 @@ function classNames(...classes) {
 export default function Header({sidebarOpen, setSidebarOpen}) {
 
   const location = useLocation();
-  const hideLogoRoutes = ['/payment', '/checkout', '/payment-page', '/payment-confirm'];
+  const hideLogoRoutes = ['/payment', '/checkout', '/payment-page', '/payment-confirm',"/e-pay"];
   const [hideLogo, setHideLogo] = useState(false);
 
   // Function to check if the current location matches any of the routes that should hide the sidebar

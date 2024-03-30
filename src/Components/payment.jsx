@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
 
 function  PaymentIntro() {
+  const [paymentOption, setPaymentOption] = useState("Internet Banking");
+
+  // Function to handle radio button change
+  const handleOptionChange = (event) => {
+    setPaymentOption(event.target.value);
+  };
+
+  useEffect(()=>{
+console.log(paymentOption)
+  },[paymentOption])
   return (
     <div className="flex flex-col w-full md:max-w-[800px] sm:mx-auto py-4 px-4  ">
       <div className="flex min-h-full  flex-col justify-center py-4 sm:px-6 lg:px-8">
@@ -155,9 +165,11 @@ function  PaymentIntro() {
                       <label>
                         <input
                           type="radio"
-                          name="optradio"
-                          defaultChecked
-                          className="form-radio "
+                          name="paymentOption"
+                          value="Internet Banking"
+                          className="form-radio"
+                          onChange={handleOptionChange}
+                          checked={paymentOption === "Internet Banking"}
                         />
                          <span className="ml-2">Internet Banking</span>
                       </label>
@@ -165,9 +177,11 @@ function  PaymentIntro() {
                     <div className="radio pt-2">
                       <label>
                         <input
-                          type="radio"
-                          name="optradio"
-                          className="form-radio"
+                        type="radio"
+                        name="paymentOption"
+                        value="Credit Card"
+                        className="form-radio"
+                        onChange={handleOptionChange}
                         />
                         <span className="ml-2">Credit Card</span> 
                       </label>
@@ -175,9 +189,11 @@ function  PaymentIntro() {
                     <div className="radio pt-2">
                       <label>
                         <input
-                          type="radio"
-                          name="optradio"
-                          className="form-radio"
+                         type="radio"
+                         name="paymentOption"
+                         value="Debit Card"
+                         className="form-radio"
+                         onChange={handleOptionChange}
                         />
                         <span className="ml-2">Debit Card</span> 
                       </label>
@@ -193,9 +209,11 @@ function  PaymentIntro() {
                     <div className="radio">
                       <label>
                         <input
-                          type="radio"
-                          name="optradio"
-                          className="form-radio"
+                         type="radio"
+                         name="paymentOption"
+                         value="e-Payment Request Slip "
+                         className="form-radio"
+                         onChange={handleOptionChange}
                         />
                         <span className="ml-2 whitespace-normal">e-Payment Request Slip</span> 
                       </label>
@@ -209,7 +227,7 @@ function  PaymentIntro() {
       </div>
 
       <div className="text-center mt-4 mb-4 self-center">
-        <Link to="/checkout" className="bg-[#0066FF] flex justify-center w-[150px] text-white font-medium shadow-sm py-1.5 px-4 rounded">
+        <Link to={`/checkout?paymentOption=${paymentOption}`} className="bg-[#0066FF] flex justify-center w-[150px] text-white font-medium shadow-sm py-1.5 px-4 rounded">
           Pay
         </Link>
       </div>
